@@ -27,18 +27,20 @@ export default function AnswersItem({
   return (
     <li>
       <article className="answer">
-        <h3>{username || "Anon"} said:</h3>
+        <h3>{answerItem.username || "Anon"} said:</h3>
         <p>
           <em>How do you rate your rubber duck colour?</em>
-          <span className="answer__line">{colour}</span>
+          <span className="answer__line">{answerItem.colour}</span>
         </p>
         <p>
           <em>How do you like to spend time with your rubber duck?</em>
           <ItemsList list={timeSpent} />
         </p>
+
+        
         <p>
           <em>What else have you got to say about your rubber duck?</em>
-          <span className="answer__line">{review}</span>
+          <span className="answer__line">{answerItem.review}</span>
         </p>
       </article>
     </li>
